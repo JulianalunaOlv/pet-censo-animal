@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/icon-pata-cor-primaria.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#007bff" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Pet Censo PG</title>
+</head>
+
+<body>
+  <header>
+    <img src="img/PG-logo-horizontal-cor-inovacao-500x196.png" class="img-header"
+      alt="Logo/Brasão PG, versão horizontal colorida">
+  </header>
+  <main>
+  
+	<div class="text-white bg-primary text-center">
+        <div id="divSpanNomeLogado"></div>
+      </div>
+
+    <div id="content" class="card p-4">
+      <div class="row row-cols-1">
+        <h1>FORMULÁRIO CENSO PET</h1>
+      </div>
+      <section class="p-4">
+        <div class="row row-cols-1">
+          <h2>Dados Pessoais</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">
+
+          <div class="col">
+            <div class="mb-3">
+              <label for="cpf" class="form-label">CPF</label>
+              <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="nomeCompleto" class="form-label">Nome completo</label>
+              <input type="text" class="form-control" id="nomeCompleto" name="nome"
+                placeholder="Digite seu nome completo" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="nomeSocial" class="form-label">Nome Social</label>
+              <input type="text" class="form-control" id="nomeSocial" name="nomeSocial"
+                placeholder="Informe seu nome social">
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="dataNascimento" class="form-label">Data de nascimento</label>
+              <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="celular" class="form-label">Celular</label>
+              <input type="tel" class="form-control" id="celular" name="celular" placeholder="(00) 00000-0000" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="sus" class="form-label">Matrícula (cadastro na Usafa)</label>
+              <input type="text" class="form-control" id="sus" name="sus" placeholder="Digite o número da matrícula"
+                required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="cep" class="form-label">CEP</label>
+              <input type="text" class="form-control" id="cep" name="cep" placeholder="00000-000" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="endereco" class="form-label">Endereço</label>
+              <input type="text" class="form-control" id="endereco" name="endereco"
+                placeholder="Não possui CEP? Digite o endereço">
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="numero" class="form-label">Número</label>
+              <input type="number" class="form-control" id="numero" name="numero" placeholder="Número" required>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="complemento" class="form-label">Complemento</label>
+              <input type="text" class="form-control" id="complemento" name="complemento"
+                placeholder="Apartamento, bloco, etc.">
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="bairro" class="form-label">Bairro</label>
+              <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Nome do bairro" required>
+            </div>
+          </div>
+          <!-- Animal de estimação -->
+          <div class="col">
+            <div class="mb-3">
+              <label class="form-label d-block">Possui animal de estimação?</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="possuiPet" id="animalSim" value="sim" required>
+                <label class="form-check-label" for="animalSim">Sim</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="possuiPet" id="animalNao" value="nao" required>
+                <label class="form-check-label" for="animalNao">Não</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary botao-voltar" onclick="window.location.href='index.html'">Voltar ao
+            Início</button>
+          <button id="botaoAvancar" class="btn btn-primary d-none">Avançar</button>
+        </div>
+      </section>
+    </div>
+    <div class="container mt-5 p-4 card">
+      <h3>Cadastros Realizados</h3>
+      <div id="listaCadastros" class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>CPF</th>
+              <th>Possui Pet?</th>
+              <!-- <th>Qtd Pets</th> -->
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="corpoTabela"></tbody>
+        </table>
+
+
+      </div>
+      <button class="btn btn-success" onclick="sincronizarCadastros()">Sincronizar</button>
+
+    </div>
+
+  </main>
+
+  <footer class="container-fluid">
+    <div class="container-footer">
+      <p class="rodape m-0">
+        © <abbr title="Município Estância Balneária de Praia Grande">MEBPG</abbr> Desenvolvido por <abbr
+          title="Secretaria de Planejamento">SEPLAN</abbr> - Secretaria de Planejamento - 2025.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+  
+    const nomeLogado = localStorage.getItem("nomeLogado");
+	document.getElementById("divSpanNomeLogado").textContent = `Usuário Logado: ${nomeLogado}`;
+		
+    const DB_NAME = "MinhaBaseDeDados";
+    const DB_VERSION = 1;
+    const STORE_NAME = "Pessoa";
+
+    // Abre ou cria o banco de dados
+    function abrirDB() {
+      return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, DB_VERSION);
+        request.onerror = () => reject("Erro ao abrir o banco de dados.");
+        request.onsuccess = () => resolve(request.result);
+        request.onupgradeneeded = (event) => {
+          const db = event.target.result;
+          if (!db.objectStoreNames.contains(STORE_NAME)) {
+            db.createObjectStore(STORE_NAME, { keyPath: "id" }); // chave manual
+          }
+        };
+      });
+    }
+
+    // Salva ou atualiza pessoa
+    async function salvarPessoa(pessoa) {
+      const db = await abrirDB();
+      const tx = db.transaction(STORE_NAME, "readwrite");
+      const store = tx.objectStore(STORE_NAME);
+      store.put(pessoa);
+      return tx.complete;
+    }
+
+    // Lista todas as pessoas
+    async function listarPessoas() {
+      const db = await abrirDB();
+      const tx = db.transaction(STORE_NAME, "readonly");
+      const store = tx.objectStore(STORE_NAME);
+      const request = store.getAll();
+      request.onsuccess = () => renderizarTabela(request.result);
+    }
+
+    // // Remove pessoa
+    // async function removerPessoa(id) {
+    //   const db = await abrirDB();
+    //   const tx = db.transaction(STORE_NAME, "readwrite");
+    //   const store = tx.objectStore(STORE_NAME);
+    //   store.delete(id);
+    //   return tx.complete;
+    // }
+
+    // Exibe pessoas na tabela
+    function renderizarTabela(pessoas) {
+      const tbody = document.getElementById("corpoTabela");
+      tbody.innerHTML = "";
+             if (pessoas.length === 0) {
+         tbody.innerHTML = "<tr><td colspan='8'>Nenhum cadastro encontrado.</td></tr>";
+         return;
+       }
+      pessoas.forEach(p => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+      <td>${p.id}</td>
+      <td>${p.nomeCompleto}</td>
+      <td>${p.cpf}</td>
+      <td>${p.possuiPet === "sim" ? "Sim" : "Não"}</td>
+      <td>Salvo</td>
+      <td>
+        <button class="btn btn-sm btn-info editar-btn" data-id="${p.id}">Editar</button>
+      </td>
+    `;
+        tbody.appendChild(tr);
+      });
+      //<td>${p.qtdPets || "-"}</td> Estava acima e foi movido pra cá
+
+      // Adiciona listeners para os botões de editar
+      document.querySelectorAll(".editar-btn").forEach(button => {
+        button.addEventListener("click", (event) => {
+          const id = event.target.dataset.id;
+          carregarPessoaParaEdicao(id);
+        });
+      });
+    }
+
+    // Modifique obterDadosFormulario para verificar se está editando
+    function obterDadosFormulario() {
+      const editingId = document.getElementById("content").dataset.editingId;
+      return {
+        id: editingId || crypto.randomUUID(), // Usa o ID existente se estiver editando, senão gera um novo
+        cdFuncionalAgenteData: '', // CHAVE ESTRANGEIRA
+        cdChaveFamiliaCenso: '', // CHAVE ESTRANGEIRA
+        cpf: document.getElementById("cpf").value.trim(),
+        nomeCompleto: document.getElementById("nomeCompleto").value.trim(),
+        nomeSocial: document.getElementById("nomeSocial").value.trim(),
+        dataNascimento: document.getElementById("dataNascimento").value,
+        email: document.getElementById("email").value.trim(),
+        celular: document.getElementById("celular").value.trim(),
+        sus: document.getElementById("sus").value.trim(), // NÚMERO DA MATRÍCULA USAFA
+        cep: document.getElementById("cep").value.trim(), // OU (campo nrCEP dentro de) cdEnderecoCenso: '', // CHAVE ESTRANGEIRA
+        endereco: document.getElementById("endereco").value.trim(), // OU (campo nrEndereco dentro de) cdEnderecoCenso: '', // CHAVE ESTRANGEIRA
+        numero: document.getElementById("numero").value.trim(),  // OU (não tem campo nrNumero dentro de) cdEnderecoCenso: '', // CHAVE ESTRANGEIRA
+        complemento: document.getElementById("complemento").value.trim(), // OU (campo dsComplemento dentro de) cdEnderecoCenso: '', // CHAVE ESTRANGEIRA
+        bairro: document.getElementById("bairro").value.trim(), // OU (campo nrBairro dentro de) cdEnderecoCenso: '', // CHAVE ESTRANGEIRA
+        possuiPet: document.querySelector('input[name="possuiPet"]:checked')?.value || "nao",
+        // qtdPets: null
+      };
+    }
+
+    // Remova o event listener de submit do formulário se for usar o botão "Salvar Edição"
+    // document.getElementById("content").addEventListener("submit", async function (e) { ... });
+
+    // Criar uma função para limpar o formulário
+    function limparFormulario() {
+      const form = document.querySelector("form");
+      if (form) {
+        form.reset();
+        document.getElementById("content").removeAttribute("data-editingId"); // Limpa o ID de edição
+      }
+    }
+
+    // Busca uma pessoa pelo ID e preenche o formulário
+    async function carregarPessoaParaEdicao(id) {
+      const db = await abrirDB();
+      const tx = db.transaction(STORE_NAME, "readonly");
+      const store = tx.objectStore(STORE_NAME);
+      const request = store.get(id);
+
+      request.onsuccess = (event) => {
+        const pessoa = event.target.result;
+        if (pessoa) {
+          document.getElementById("cpf").value = pessoa.cpf;
+          document.getElementById("nomeCompleto").value = pessoa.nomeCompleto;
+          document.getElementById("nomeSocial").value = pessoa.nomeSocial;
+          document.getElementById("dataNascimento").value = pessoa.dataNascimento;
+          document.getElementById("email").value = pessoa.email;
+          document.getElementById("celular").value = pessoa.celular;
+          document.getElementById("sus").value = pessoa.sus;
+          document.getElementById("cep").value = pessoa.cep;
+          document.getElementById("endereco").value = pessoa.endereco;
+          document.getElementById("numero").value = pessoa.numero;
+          document.getElementById("complemento").value = pessoa.complemento;
+          document.getElementById("bairro").value = pessoa.bairro;
+
+          if (pessoa.possuiPet === "sim") {
+            document.getElementById("animalSim").checked = true;
+          } else {
+            document.getElementById("animalNao").checked = true;
+          }
+
+          // Armazena o ID do registro que está sendo editado
+          document.getElementById("content").dataset.editingId = pessoa.id;
+
+          // Altera o título do formulário para indicar edição
+          document.querySelector("h1").textContent = "EDITAR DADOS DO CENSO PET";
+
+          // Esconde o botão "Avançar" e mostra um botão de "Salvar Edição"
+          document.getElementById("botaoAvancar").classList.add("d-none");
+          let btnSalvarEdicao = document.getElementById("btnSalvarEdicao");
+          if (!btnSalvarEdicao) {
+            btnSalvarEdicao = document.createElement("button");
+            btnSalvarEdicao.id = "btnSalvarEdicao";
+            btnSalvarEdicao.classList.add("btn", "btn-success", "ms-2");
+            btnSalvarEdicao.textContent = "Salvar Edição";
+            document.querySelector(".d-grid.gap-2.d-md-flex.justify-content-md-end").appendChild(btnSalvarEdicao);
+
+            btnSalvarEdicao.addEventListener("click", async () => {
+              const idParaAtualizar = document.getElementById("content").dataset.editingId;
+              if (idParaAtualizar) {
+                const dadosAtualizados = obterDadosFormulario();
+                dadosAtualizados.id = idParaAtualizar; // Garante que o ID é o do registro original
+                await salvarPessoa(dadosAtualizados); // Use a mesma função salvarPessoa
+                alert("Dados atualizados com sucesso!");
+                listarPessoas(); // Atualiza a tabela
+                limparFormulario(); // Limpa o formulário
+                // Reverte o título e os botões
+                document.querySelector("h1").textContent = "FORMULÁRIO CENSO PET";
+                btnSalvarEdicao.remove();
+                document.getElementById("botaoAvancar").classList.remove("d-none");
+              }
+            });
+          }
+        } else {
+          alert("Pessoa não encontrada.");
+        }
+      };
+    }
+
+    // Lida com o envio do formulário (seja para novo cadastro ou edição)
+    document.getElementById("content").addEventListener("submit", async function (e) {
+      // Verifica se o evento de submit é de um formulário dentro do #content
+      if (e.target.tagName === "FORM") {
+        e.preventDefault(); // Impede o comportamento padrão de recarregar a página
+
+        const dados = obterDadosFormulario(); // Coleta os dados do formulário
+
+        // Verifique se há um ID de edição armazenado no dataset
+        const editingId = document.getElementById("content").dataset.editingId;
+
+        if (editingId) {
+          // Se houver um ID de edição, atribua-o aos dados para atualizar o registro existente
+          dados.id = editingId;
+        } else {
+          // Caso contrário, se for um novo cadastro, um novo ID já será gerado por obterDadosFormulario()
+          // ou você pode garantir que ele seja gerado aqui se preferir.
+          // dados.id = crypto.randomUUID(); // <-- Já é tratado dentro de obterDadosFormulario
+        }
+
+        try {
+          await salvarPessoa(dados); // Salva ou atualiza a pessoa no IndexedDB
+          listarPessoas(); // Atualiza a tabela exibida
+
+          // Limpa o formulário e remove o ID de edição
+          e.target.reset();
+          document.getElementById("content").removeAttribute("data-editingId");
+
+          // Reverte o título do formulário para o padrão
+          document.querySelector("h1").textContent = "FORMULÁRIO CENSO PET";
+
+          // Esconde o botão "Salvar Edição" se ele existir
+          const btnSalvarEdicao = document.getElementById("btnSalvarEdicao");
+          if (btnSalvarEdicao) {
+            btnSalvarEdicao.remove();
+          }
+          // Garante que o botão "Avançar" esteja visível para novos cadastros
+          document.getElementById("botaoAvancar").classList.remove("d-none");
+
+          alert("Dados salvos com sucesso!");
+
+        } catch (error) {
+          console.error("Erro ao salvar os dados:", error);
+          alert("Ocorreu um erro ao salvar os dados. Por favor, tente novamente.");
+        }
+      }
+    });
+
+    // Botões e lógica de navegação
+    document.addEventListener("DOMContentLoaded", () => {
+      const radioSim = document.getElementById("animalSim");
+      const radioNao = document.getElementById("animalNao");
+      const botaoAvancar = document.getElementById("botaoAvancar");
+
+       if (botaoAvancar && radioSim && radioNao) {
+         function atualizarBotao() {
+           botaoAvancar.classList.remove("d-none");
+
+          // if (radioSim.checked) {
+          //   botaoAvancar.textContent = "Avançar para Etapa 2";
+          //   botaoAvancar.onclick = () => {
+          //     const dados = obterDadosFormulario();
+          //     if (!dados.id) { // Se for um novo cadastro, salve
+          //       salvarPessoa(dados)
+          //         .then(() => {
+          //           window.location.href = "etapa2.html";
+
+          //         })
+          //         .catch(error => {
+          //           alert("Erro ao salvar os dados para avançar para a Etapa 2.");
+          //           console.error(error);
+          //         });
+          //     } else { // Se já for edição, apenas avança (os dados já foram "salvos" ao preencher o formulário)
+          //       window.location.href = "etapa2.html";
+          //     }
+          //   };
+          // }
+
+if (radioSim.checked) {
+        // AQUI: Alteramos a funcionalidade do botão "Finalizar Cadastro" para avançar para Etapa 2
+        // Apesar do texto, a ação será de salvar e redirecionar para a Etapa 2.
+        botaoAvancar.textContent = "Avançar para Etapa 2"; // Pode manter "Finalizar Cadastro" ou mudar o texto
+        botaoAvancar.onclick = async () => {
+          const dados = obterDadosFormulario();
+          try {
+            // **Salva os dados, mesmo que o usuário não possua pet, e avança.**
+            await salvarPessoa(dados);
+            console.log("Dados salvos (não possui pet) antes de avançar para a Etapa 2.");
+            
+            // Redireciona para a Etapa 2, mesmo sem pets (para mostrar a Etapa 2 vazia ou com uma mensagem).
+            window.location.href = "etapa2.html"; 
+
+            // Removidas as linhas de alert, listarPessoas, limparFormulario, etc.,
+            // pois a intenção é AVANÇAR, não finalizar e exibir a lista.
+            // Se você quiser que o cadastro seja "finalizado" no sentido de completo
+            // mas ainda leve para a etapa 2 para alguma visualização, ajuste o texto
+            // do botão e a lógica na etapa 2.
+
+          } catch (err) {
+            console.error("Erro ao salvar e avançar para Etapa 2 (não possui pet):", err);
+            alert("Erro ao salvar e avançar para a Etapa 2. Por favor, tente novamente.");
+          }
+        };
+      }
+
+          else if (radioNao.checked) {
+            botaoAvancar.textContent = "Finalizar Cadastro";
+            botaoAvancar.onclick = async () => {
+              const dados = obterDadosFormulario();
+              try {
+                await salvarPessoa(dados);
+                alert("Cadastro finalizado com sucesso!");
+                listarPessoas();
+                limparFormulario(); // Limpa o formulário após salvar
+                // Reverte o título e esconde o botão de salvar edição se ele existir
+                document.querySelector("h1").textContent = "FORMULÁRIO CENSO PET";
+                const btnSalvarEdicao = document.getElementById("btnSalvarEdicao");
+                if (btnSalvarEdicao) btnSalvarEdicao.remove();
+                botaoAvancar.classList.remove("d-none"); // Garante que o botão avançar apareça novamente
+              } catch (err) {
+                console.error("Erro ao finalizar o cadastro:", err);
+                alert("Erro ao finalizar o cadastro.");
+              }
+            };
+          }
+        }
+
+        radioSim.addEventListener("change", atualizarBotao);
+        radioNao.addEventListener("change", atualizarBotao);
+        // Adicione um evento para quando o formulário for "resetado" ou quando iniciar sem edição
+        // Para garantir que o botão "Avançar" esteja correto
+        atualizarBotao(); // Chama no carregamento para definir o estado inicial
+      }
+    });
+
+
+    // Sincronizar (placeholder)
+    function sincronizarCadastros() {
+      alert("Funcionalidade de sincronização ainda não implementada.");
+    }
+
+    // Inicialização
+    listarPessoas();
+
+  </script>
+
+  <!-- <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker registrado!'))
+        .catch(error => console.error('Erro ao registrar o Service Worker:', error));
+    }
+  </script> -->
+
+  <!-- <script src="js/db.js"></script> -->
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

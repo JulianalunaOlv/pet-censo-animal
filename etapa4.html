@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="img/icon-pata-cor-primaria.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#007bff" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Pet Censo PG</title>
+</head>
+<body>
+  <header>
+    <img src="img/PG-logo-horizontal-cor-inovacao-500x196.png" class="img-header" alt="Logo/Brasão PG, versão horizontal colorida">
+  </header>
+  <main>
+    
+    <div id="content" class="card p-4">
+      <div class="row row-cols-1">
+        <h1>FORMULÁRIO CENSO PET</h1>
+      </div>
+      <section class="p-4">
+        <div class="row row-cols-1">
+          <h2>Dados Gerais dos animais</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-2">  
+                    
+            <!-- Frequência de visitas ao veterinário -->
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label">Qual a frequência que seu pet vai ao veterinário?</label>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="frequenciaVeterinario" id="veterinarioDoente" value="Somente quando adoece">
+                  <label class="form-check-label" for="veterinarioDoente">Somente quando adoece</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="frequenciaVeterinario" id="veterinario3meses" value="A cada 3 meses">
+                  <label class="form-check-label" for="veterinario3meses">A cada 3 meses</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="frequenciaVeterinario" id="veterinario6meses" value="A cada 6 meses">
+                  <label class="form-check-label" for="veterinario6meses">A cada 6 meses</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="frequenciaVeterinario" id="veterinarioAnual" value="1 vez ao ano">
+                  <label class="form-check-label" for="veterinarioAnual">1 vez ao ano</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Procedimento quando o animal adoece -->
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label">Quando o animal adoece, como você procede?</label>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="procedimentoDoenca" id="procAutomedicacao" value="Automedicação">
+                  <label class="form-check-label" for="procAutomedicacao">Automedicação</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="procedimentoDoenca" id="procPetshop" value="Petshop">
+                  <label class="form-check-label" for="procPetshop">Petshop</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="procedimentoDoenca" id="procVeterinario" value="Médico Veterinário">
+                  <label class="form-check-label" for="procVeterinario">Médico Veterinário</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="procedimentoDoenca" id="procOutro" value="Outro">
+                  <label class="form-check-label" for="procOutro">Outro</label>
+                </div>
+              </div>
+            </div>
+
+         <!-- Método para evitar crias (fêmeas) -->
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label">Qual método você utiliza para evitar crias (fêmeas)?</label>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="metodoEvitarCrias" id="metodoAnticoncepcional" value="Anticoncepcional">
+                  <label class="form-check-label" for="metodoAnticoncepcional">Anticoncepcional</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="metodoEvitarCrias" id="metodoPrende" value="Prende o animal">
+                  <label class="form-check-label" for="metodoPrende">Prende o animal</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="metodoEvitarCrias" id="metodoCastra" value="Castra o animal">
+                  <label class="form-check-label" for="metodoCastra">Castra o animal</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="metodoEvitarCrias" id="metodoNaoAdota" value="Não adota medida alguma">
+                  <label class="form-check-label" for="metodoNaoAdota">Não adota medida alguma</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="metodoEvitarCrias" id="metodoNaoTemFemea" value="Não tenho/tinha fêmea">
+                  <label class="form-check-label" for="metodoNaoTemFemea">Não tenho/tive fêmea</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Conhecimento sobre zoonoses -->
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label">Você sabe o que são zoonoses?</label>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="conhecimentoZoonoses" id="zoonosesSim" value="Sim">
+                  <label class="form-check-label" for="zoonosesSim">Sim</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="conhecimentoZoonoses" id="zoonosesNao" value="Não">
+                  <label class="form-check-label" for="zoonosesNao">Não</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contato do pet com ratos -->
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label">
+                  Em relação a rato, você já encontrou em sua residência e como foi o contato do seu pet com ele?
+                </label>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="contatoRato" id="ratoNaoEncontrado" value="Não encontrou rato na residência">
+                  <label class="form-check-label" for="ratoNaoEncontrado">Não encontrou rato na residência</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="contatoRato" id="ratoSemContato" value="Encontrou mas os pets não tiveram contato com rato">
+                  <label class="form-check-label" for="ratoSemContato">Encontrou mas os pets não tiveram contato com rato</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="contatoRato" id="ratoMatou" value="Encontrou e matou">
+                  <label class="form-check-label" for="ratoMatou">Encontrou e matou</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="contatoRato" id="ratoComeu" value="Encontrou e comeu">
+                  <label class="form-check-label" for="ratoComeu">Encontrou e comeu</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="contatoRato" id="ratoBrincou" value="Encontrou e brincou">
+                  <label class="form-check-label" for="ratoBrincou">Encontrou e brincou</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Presença de morcego na residência -->
+            <div class="col">
+              <div class="mb-3">
+                <label class="form-label">
+                  Em relação a morcego, você já encontrou em sua residência?
+                </label>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="presencaMorcego" id="morcegoSim" value="Sim">
+                  <label class="form-check-label" for="morcegoSim">Sim</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="presencaMorcego" id="morcegoNao" value="Não">
+                  <label class="form-check-label" for="morcegoNao">Não</label>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button  class="btn btn-primary botao-voltar"  onclick="window.location.href='etapa3.html'"><i class="bi bi-arrow-left-short"></i> Voltar</button>
+        <button class="btn btn-primary botao-prosseguir" onclick="window.location.href='etapa5.html'"><i class="bi bi-arrow-right-short"></i> Avançar</button>
+      </div>
+    </div>   
+  </main>
+
+  <footer class="container-fluid">
+    <div class="container-footer">
+      <p class="rodape m-0">
+        © <abbr title="Município Estância Balneária de Praia Grande">MEBPG</abbr> Desenvolvido por <abbr title="Secretaria de Planejamento">SEPLAN</abbr> - Secretaria de Planejamento - 2025.
+      </p>
+    </div>
+  </footer>
+
+  
+   <script src="js/db.js"></script>
+  
+</body>
+</html>
+  
