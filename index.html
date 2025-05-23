@@ -12,110 +12,111 @@
   <title>Pet Censo PG</title>
 </head>
 <body>
-  <header>
-    <img src="img/PG-logo-horizontal-cor-inovacao-500x196.png" class="img-header" alt="Logo/Brasão PG, versão horizontal colorida">
-  </header>
-  <main>
-    
-    <div id="content" class="card p-4">
-      <div class="row row-cols-1">
-        <h1>FORMULÁRIO CENSO PET</h1>
-      </div>
-      <div class="row row-cols-1 row-cols-lg-2">  
-        <div class="col">
-          <div class="mb-3">
-            <label for="rf" class="form-label">Registro Funcional</label>
-            <input type="text" class="form-control" id="rf" name="rf" placeholder="Digite o seu registro funcional" autofocus required>
-          </div>
+    <header>
+        <img src="img/PG-logo-horizontal-cor-inovacao-500x196.png" class="img-header" alt="Logo/Brasão PG, versão horizontal colorida">
+    </header>
+    <main>
+
+        <div id="content" class="card p-4">
+            <div class="row row-cols-1">
+                <h1>FORMULÁRIO CENSO PET</h1>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="rf" class="form-label">Registro Funcional</label>
+                        <input type="text" class="form-control" id="rf" name="rf" placeholder="Digite o seu registro funcional" autofocus required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1">
+                <div class="col">
+                    <div class="mb-3">
+                        <legend>Selecione a USAFA:</legend>
+                        <label><input type="radio" name="usafa" id="usafaAloha" value="Aloha"> Aloha</label>
+                        <label><input type="radio" name="usafa" id="usafaAnhanguera" value="Anhanguera"> Anhanguera</label>
+                        <label><input type="radio" name="usafa" id="usafaAntartica" value="Antártica"> Antártica</label>
+                        <label><input type="radio" name="usafa" id="usafaAviacao" value="Aviação"> Aviação</label>
+                        <label><input type="radio" name="usafa" id="usafaBoqueirao" value="Boqueirão"> Boqueirão</label>
+                        <label><input type="radio" name="usafa" id="usafaCaicara" value="Caiçara"> Caiçara</label>
+                        <label><input type="radio" name="usafa" id="usafaEsmeralda" value="Esmeralda"> Esmeralda</label>
+                        <label><input type="radio" name="usafa" id="usafaForte" value="Forte"> Forte</label>
+                        <label><input type="radio" name="usafa" id="usafaGuaramar" value="Guaramar"> Guaramar</label>
+                        <label><input type="radio" name="usafa" id="usafaGuilhermina" value="Guilhermina"> Guilhermina</label>
+                        <label><input type="radio" name="usafa" id="usafaMaracana" value="Maracanã"> Maracanã</label>
+                        <label><input type="radio" name="usafa" id="usafaMelvi" value="Melvi"> Melvi</label>
+                        <label><input type="radio" name="usafa" id="usafaMirim1" value="Mirim I"> Mirim I</label>
+                        <label><input type="radio" name="usafa" id="usafaMirim2" value="Mirim II"> Mirim II</label>
+                        <label><input type="radio" name="usafa" id="usafaNoemia" value="Noêmia"> Noêmia</label>
+                        <label><input type="radio" name="usafa" id="usafaOcian" value="Ocian"> Ocian</label>
+                        <label><input type="radio" name="usafa" id="usafaPrincesa" value="Princesa"> Princesa</label>
+                        <label><input type="radio" name="usafa" id="usafaQuietude" value="Quietude"> Quietude</label>
+                        <label><input type="radio" name="usafa" id="usafaReal" value="Real"> Real</label>
+                        <label><input type="radio" name="usafa" id="usafaRibeiropolis" value="Ribeirópolis"> Ribeirópolis</label>
+                        <label><input type="radio" name="usafa" id="usafaRioBranco" value="Rio Branco"> Rio Branco</label>
+                        <label><input type="radio" name="usafa" id="usafaSamambaia" value="Samambaia"> Samambaia</label>
+                        <label><input type="radio" name="usafa" id="usafaSantaMarina" value="Santa Marina"> Santa Marina</label>
+                        <label><input type="radio" name="usafa" id="usafaSaoJorge" value="São Jorge"> São Jorge</label>
+                        <label><input type="radio" name="usafa" id="usafaSolemar" value="Solemar"> Solemar</label>
+                        <label><input type="radio" name="usafa" id="usafaTudeBastos" value="Tude Bastos"> Tude Bastos</label>
+                        <label><input type="radio" name="usafa" id="usafaTupi" value="Tupi"> Tupi</label>
+                        <label><input type="radio" name="usafa" id="usafaTupiry" value="Tupiry"> Tupiry</label>
+                        <label><input type="radio" name="usafa" id="usafaVilaAlice" value="Vila Alice"> Vila Alice</label>
+                        <label><input type="radio" name="usafa" id="usafaVilaSonia" value="Vila Sônia"> Vila Sônia</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <legend>Selecione a COR correspondente à sua equipe:</legend>
+                        <label><input type="radio" name="corUsafa" id="Amarelo" value="Amarelo"> Amarelo</label>
+                        <label><input type="radio" name="corUsafa" id="Azul" value="Azul"> Azul</label>
+                        <label><input type="radio" name="corUsafa" id="Vermelho" value="Vermelho"> Vermelho</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button id="btnIniciarCadastro" class="btn btn-primary">Iniciar Cadastro</button>
+            </div>
+
+            </br>
+
+            <div id="mensagem" class="text-white bg-danger text-center"></div>
+
         </div>
-      </div>    
-	
-	<div class="row row-cols-1">  
-        <div class="col">
-          <div class="mb-3">
-              <legend>Selecione a USAFA:</legend>
-              <label><input type="radio" name="usafa" id="usafaAloha" value="Aloha"> Aloha</label>
-              <label><input type="radio" name="usafa" id="usafaAnhanguera" value="Anhanguera"> Anhanguera</label>
-              <label><input type="radio" name="usafa" id="usafaAntartica" value="Antártica"> Antártica</label>
-              <label><input type="radio" name="usafa" id="usafaAviacao" value="Aviação"> Aviação</label>
-              <label><input type="radio" name="usafa" id="usafaBoqueirao" value="Boqueirão"> Boqueirão</label>
-              <label><input type="radio" name="usafa" id="usafaCaicara" value="Caiçara"> Caiçara</label>
-              <label><input type="radio" name="usafa" id="usafaEsmeralda" value="Esmeralda"> Esmeralda</label>
-              <label><input type="radio" name="usafa" id="usafaForte" value="Forte"> Forte</label>
-              <label><input type="radio" name="usafa" id="usafaGuaramar" value="Guaramar"> Guaramar</label>
-              <label><input type="radio" name="usafa" id="usafaGuilhermina" value="Guilhermina"> Guilhermina</label>
-              <label><input type="radio" name="usafa" id="usafaMaracana" value="Maracanã"> Maracanã</label>
-              <label><input type="radio" name="usafa" id="usafaMelvi" value="Melvi"> Melvi</label>
-              <label><input type="radio" name="usafa" id="usafaMirim1" value="Mirim I"> Mirim I</label>
-              <label><input type="radio" name="usafa" id="usafaMirim2" value="Mirim II"> Mirim II</label>
-              <label><input type="radio" name="usafa" id="usafaNoemia" value="Noêmia"> Noêmia</label>
-              <label><input type="radio" name="usafa" id="usafaOcian" value="Ocian"> Ocian</label>
-              <label><input type="radio" name="usafa" id="usafaPrincesa" value="Princesa"> Princesa</label>
-              <label><input type="radio" name="usafa" id="usafaQuietude" value="Quietude"> Quietude</label>
-              <label><input type="radio" name="usafa" id="usafaReal" value="Real"> Real</label>
-              <label><input type="radio" name="usafa" id="usafaRibeiropolis" value="Ribeirópolis"> Ribeirópolis</label>
-              <label><input type="radio" name="usafa" id="usafaRioBranco" value="Rio Branco"> Rio Branco</label>
-              <label><input type="radio" name="usafa" id="usafaSamambaia" value="Samambaia"> Samambaia</label>
-              <label><input type="radio" name="usafa" id="usafaSantaMarina" value="Santa Marina"> Santa Marina</label>
-              <label><input type="radio" name="usafa" id="usafaSaoJorge" value="São Jorge"> São Jorge</label>
-              <label><input type="radio" name="usafa" id="usafaSolemar" value="Solemar"> Solemar</label>
-              <label><input type="radio" name="usafa" id="usafaTudeBastos" value="Tude Bastos"> Tude Bastos</label>
-              <label><input type="radio" name="usafa" id="usafaTupi" value="Tupi"> Tupi</label>
-              <label><input type="radio" name="usafa" id="usafaTupiry" value="Tupiry"> Tupiry</label>
-              <label><input type="radio" name="usafa" id="usafaVilaAlice" value="Vila Alice"> Vila Alice</label>
-              <label><input type="radio" name="usafa" id="usafaVilaSonia" value="Vila Sônia"> Vila Sônia</label>
-          </div>
+        <!--AQUI SERÁ A CONFIRMAÇÃO DO REGISTRO FUNCIONAL -->
+
+    </main>
+
+    <footer class="container-fluid">
+        <div class="container-footer">
+            <p class="rodape m-0">
+                © <abbr title="Município Estância Balneária de Praia Grande">MEBPG</abbr> Desenvolvido por <abbr title="Secretaria de Planejamento">SEPLAN</abbr> - Secretaria de Planejamento - 2025.
+            </p>
         </div>
-        <div class="col">
-          <div class="mb-3">
-            <legend>Selecione a COR correspondente à sua equipe:</legend>
-            <label><input type="radio" name="corUsafa" id="Amarelo" value="Amarelo"> Amarelo</label>
-            <label><input type="radio" name="corUsafa" id="Azul" value="Azul"> Azul</label>
-            <label><input type="radio" name="corUsafa" id="Vermelho" value="Vermelho"> Vermelho</label>
-          </div>
-        </div>
-      </div>
-	  
-	  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-		<button id="btnIniciarCadastro" class="btn btn-primary" >Iniciar Cadastro</button>      
-	  </div>
-	  
-	</br>
-	
-	<div id="mensagem" class="text-white bg-danger text-center"></div>
-  
-    </div>
-    <!--AQUI SERÁ A CONFIRMAÇÃO DO REGISTRO FUNCIONAL -->
-   
-  </main>
+    </footer>
 
-  <footer class="container-fluid">
-    <div class="container-footer">
-      <p class="rodape m-0">
-        © <abbr title="Município Estância Balneária de Praia Grande">MEBPG</abbr> Desenvolvido por <abbr title="Secretaria de Planejamento">SEPLAN</abbr> - Secretaria de Planejamento - 2025.
-      </p>
-    </div>
-  </footer> 
+    <div id="toast" class="toast"></div>
 
-  <div id="toast" class="toast"></div>
+    <!-- <script src="js/db.js"></script> -->
+    <script src="js/app.js"></script>
+    <script src="js/dbindex.js"></script>
+    <script src="js/registroFuncional.js"></script>
 
-  <script>
-    function mostrarToast(mensagem, duracao = 3000) {
-  const toast = document.getElementById('toast');
-  toast.textContent = mensagem;
-  toast.classList.add('show');
-  
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, duracao);
-}
+    <script>
 
-  </script>
+        function mostrarToast(mensagem, duracao = 3000) {
+            const toast = document.getElementById('toast');
+            toast.textContent = mensagem;
+            toast.classList.add('show');
 
-  <!-- <script src="js/app.js"></script> -->
-  <script src="js/registroFuncional.js"></script>
-  <script src="js/db.js"></script>
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, duracao);
+        }
 
+    </script>
 
 </body>
 </html>

@@ -77,7 +77,8 @@ h1 {
 
 h2 {
   color: var(--cor-layout-base) !important;
-  padding: 2%;
+  padding: 0%;
+  padding-bottom: 2%;
   font-weight: bold;
 }
 
@@ -130,14 +131,14 @@ legend {
 
 /*BOTOES*/
 
-.btn.botao-prosseguir {
+.btn.botao-avancar {
   background-color:var(--cor-layout-base) !important;
   font-weight: 400;
   padding: 0.5rem;
   border: none;
 }
 
-.botao-prosseguir:hover {
+.botao-avancar:hover {
   background-color: var(--cor-secundaria) !important;
 
 }
